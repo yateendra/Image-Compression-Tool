@@ -1,0 +1,328 @@
+.compressor {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.uploadArea {
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+  margin-bottom: 30px;
+}
+
+.uploadArea:hover {
+  border-color: #666;
+  background-color: #f0f0f0;
+}
+
+.uploadIcon {
+  margin-bottom: 16px;
+  color: #666;
+}
+
+.uploadTitle {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.uploadSubtitle {
+  font-size: 14px;
+  color: #666;
+}
+
+.compressionArea {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.imagesContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .imagesContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+.imageCard {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.imageHeader {
+  padding: 16px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.imageHeader h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.imageHeader p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.imagePreview {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+.imagePreview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.placeholderText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #999;
+}
+
+.placeholderText svg {
+  margin-bottom: 12px;
+}
+
+.placeholderText p {
+  font-size: 14px;
+}
+
+.controlsCard {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tab {
+  flex: 1;
+  padding: 16px;
+  text-align: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  background-color: #f5f5f5;
+}
+
+.activeTab {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+.controlsContent {
+  padding: 24px;
+}
+
+.sizeControl,
+.qualityControl {
+  margin-bottom: 24px;
+}
+
+.sizeControl label,
+.qualityControl label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+}
+
+.inputGroup input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.inputGroup span {
+  margin-left: 12px;
+  font-size: 16px;
+  color: #666;
+}
+
+.slider {
+  width: 100%;
+  height: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #e0e0e0;
+  outline: none;
+  border-radius: 3px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #000;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #000;
+  cursor: pointer;
+}
+
+.sliderLabels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 12px;
+}
+
+.compressButton,
+.downloadButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.compressButton {
+  background-color: #000;
+  color: white;
+}
+
+.compressButton:hover {
+  background-color: #333;
+}
+
+.compressButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.downloadButton {
+  background-color: white;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.downloadButton:hover {
+  background-color: #f5f5f5;
+}
+
+.progressContainer {
+  width: 80%;
+  text-align: center;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+.resultsCard {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 24px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.resultsCard h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.resultsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .resultsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.resultItem {
+  padding: 12px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.resultLabel {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 4px 0;
+}
+
+.resultValue {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
